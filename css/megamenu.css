@@ -263,13 +263,6 @@ ul.menu-col li a:focus{
         background-color: transparent;
         color: inherit;
     }
-    nav.main-menu li.mega-menu-item a.mega-menu-link:after{
-        font-family: 'FontAwesome';
-        content: "\f105";
-        float: right;
-        font-size: 16px;
-        margin-left: 10px;
-    }
     nav.main-menu li.mega-menu-item.on > a.mega-menu-link:after{
         content: "\f107";
     }
@@ -319,15 +312,6 @@ ul.menu-col li a:focus{
         background-color: transparent;
         border-right: 0;
         border-bottom: solid 1px #e0e0e0;
-    }
-   nav.main-menu .mega-menu-item .megamenu-content .col-menu .title:before{
-        font-family: 'FontAwesome';
-        content: "\f105";
-        float: right;
-        font-size: 16px;
-        margin-left: 10px;
-        position: relative;
-        right: 0;
     }
     nav.main-menu .mega-menu-item .megamenu-content .col-menu:last-child .title{
         border-bottom: none;

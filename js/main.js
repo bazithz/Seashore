@@ -429,17 +429,6 @@
          jQuery("a[data-gal^='prettyPhoto']").prettyPhoto({hook: 'data-gal'})
  
      });
-     $(document).ready(function() {
-     var e = '<div class="cmt_floting_customsett">'+
-                 '<a href="https://support.cymolthemes.com/" class="tmtheme_fbar_icons"><i class="fa fa-headphones"></i><span>Support</span></a>'+
-                 '<a href="https://www.cymolthemes.com/" class="tmtheme_fbar_icons"><i class="themifyicon themifyicon ti-pencil"></i><span>Customization</span></a>'+
-                 '<a href="https://1.envato.market/PLGdN" class="tmtheme_fbar_icons"><i class="themifyicon ti-shopping-cart"></i><span class="buy_link">Buy<span></span></span></a>'+
-                 '<div class="clearfix"></div>'+
-             '</div>';
- 
-     $('body').append(e);
- });
- 
      
  /*------------------------------------------------------------------------------*/
  /* share-icon_btn
@@ -600,8 +589,73 @@
          
      }); 
  
- 
- 
+    //  Contact validation
+
+
+document.getElementById("request_qoute_form").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    let name = document.querySelector('input[name="name"]');
+    let email = document.querySelector('input[name="address"]');
+    let phone = document.querySelectorAll('input[name="phone"]')[0];
+    let subject = document.querySelectorAll('input[name="phone"]')[1];
+    let message = document.querySelector('textarea[name="message"]');
+
+    let valid = true;
+
+    // Clear previous errors
+    document.querySelectorAll(".error-msg").forEach(el => el.remove());
+
+    function showError(input, msg) {
+        const error = document.createElement("div");
+        error.className = "error-msg";
+        error.style.color = "red";
+        error.style.fontSize = "14px";
+        error.textContent = msg;
+        input.parentNode.appendChild(error);
+        valid = false;
+    }
+
+    if (name.value.trim() === "") {
+        showError(name, "Name is required");
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+        showError(email, "Enter a valid email");
+    }
+
+    const phoneValue = phone.value.trim();
+    if (!/^\d+$/.test(phoneValue)) {
+        showError(phone, "Phone number must be numeric");
+    } else if (phoneValue.length > 10) {
+        showError(phone, "Phone number must not exceed 10 digits");
+    }
+
+    if (subject.value.trim() === "") {
+        showError(subject, "Subject is required");
+    }
+
+    if (message.value.trim() === "") {
+        showError(message, "Message is required");
+    }
+
+    if (valid) {
+        this.submit(); // Submit the form if all validations pass
+    }
+});
+
+
+
+// portfolio
+lightbox.option({
+    'resizeDuration': 300,
+    'fadeDuration': 600,
+    'imageFadeDuration': 600,
+    'wrapAround': true // enables next/prev navigation
+  });
+
+
  /*------------------------------------------------------------------------------*/
  /* Back to top
  /*------------------------------------------------------------------------------*/

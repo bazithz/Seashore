@@ -47,7 +47,7 @@
 /* ===============================================
     1.ttm-row
 ------------------------*/
-.ttm-row{ padding: 90px 0;}
+.ttm-row{ padding: 50px 0;}
 .ttm-row.broken-section { padding: 0 0; }
 .ttm-row.services-section { padding: 0px 0 50px; }
 .ttm-row.portfolio-section { padding: 150px 0 75px; }
@@ -287,7 +287,6 @@
     position: absolute;
     top: 10%;
     width: 0;
-    border-right: 1px solid #e7e7e7;
     left: auto;
 }
 .ttm-bgcolor-darkgrey .section-title.style2 .title-header:after,
@@ -2473,13 +2472,14 @@ div:hover > .ttm-box-view-overlay:before, div:hover > .ttm-box-view-content-inne
     content: "";
     width: 5px;
     left: 0;
-    bottom: 50%;
+    top: 0;
     background: #eaeaea;
     height: 0;
     position: absolute;
-    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    transition: height 0.4s ease-in-out;
     z-index: 1;
 }
+
 .widget.widget-nav-menu ul li:hover a:before, .widget.widget-nav-menu ul li.active a:before {
     height: 100%;
     bottom: 0;

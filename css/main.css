@@ -679,7 +679,7 @@ a:hover, .ttm-bgcolor-darkgrey a:hover,
 :not(.ttm-bgcolor-darkgrey) .ttm-textcolor-skincolor a, :not(.ttm-bgcolor-darkgrey) .ttm-textcolor-skincolor i,
 .testimonials-nav .slick-current.testimonial-author_info .testimonial-avatar img,
 .widget .tagcloud a:hover {
-    border-color: #ff6229;
+    border-color: #ffbc2b;
 }
 
 .ttm-bgcolor-darkgrey .tooltip-top:before, .ttm-bgcolor-darkgrey .tooltip:before, 
@@ -688,14 +688,14 @@ a:hover, .ttm-bgcolor-darkgrey a:hover,
 .ttm-bgcolor-grey [data-tooltip]:before, .header_search .header_search_content,
 nav.main-menu, .ttm-tabs.ttm-tab-style-01 ul.tabs li.active a:before,
 article.ttm-blog-classic , #payment .payment_box, .coupon_toggle .coupon_code{
-    border-top-color: #ff6229 !important;
+    border-top-color: #ffbc2b !important;
 }
 
 .ttm-bgcolor-darkgrey .tooltip-bottom:before,
 .featured-icon-box.icon-align-top-content.style2:before,
 .featured-icon-box.icon-align-top-content.style6:before,
 .header_search .header_search_content:before {
-    border-bottom-color: #ff6229;
+    border-bottom-color: #ffbc2b;
 }
 
 
@@ -780,7 +780,7 @@ nav.main-menu ul.menu li ul.mega-submenu li a,
 .featured-icon-box.icon-align-top-content.style5 .ttm-btn:after ,
 .featured-icon-box.icon-align-top-content.style5 .ttm-btn i,
 .product:hover .ttm-shop-icon .product-btn{
-  background-color: #343c5c;
+  background-color: #122750;
 }
 
 .ttm-icon.ttm-icon_element-border.ttm-icon_element-color-darkgrey,
@@ -862,8 +862,8 @@ a.ttm-btn.ttm-btn-style-fill.ttm-btn-color-white:hover,
 .featured-imagebox-portfolio.style2 .featured-title h5 a,
 .featured-imagebox-team.style1 .media-block .media-btn, 
 .featured-imagebox-team.style1 .media-block .social-icons li a:hover,
-.ttm-bgcolor-darkgrey .section-title.style2 .title-desc,
-.ttm-bgcolor-skincolor .section-title.style2 .title-desc,
+.ttm-bgcolor-darkgrey .section-title.style2,
+.ttm-bgcolor-skincolor .section-title.style2,
 .widget .tagcloud a:hover,
 
 .pagination-block .page-numbers:hover,
@@ -944,6 +944,9 @@ nav.main-menu ul.menu li > ul.mega-submenu li a:hover,
 } 
 .ttm-icon.ttm-icon_element-fill.ttm-icon_element-color-grey{
     color: inherit;
+}
+.ttm-btn-color-contact-us{
+    background-image: linear-gradient(to right, #ffad00 0%, #fdb51a 50%, #ffc851 100%);
 }
 
 
@@ -2300,7 +2303,62 @@ article.ttm-blog-classic:hover .ttm-post-featured-wrapper .ttm-post-featured:aft
 .our-services-bg{
     background-color: #eff7ff;
 }
+.custom-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
 
+/* Images take full width of their cell */
+.custom-gallery-grid img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.custom-gallery-grid img:hover {
+    transform: scale(1.02);
+}
+
+/* For row 2: span 1.5 columns each to make 2 images fit in 3 columns */
+.custom-gallery-grid .span-2 {
+    grid-column: span 1.5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .custom-gallery-grid .span-2 {
+        grid-column: span 2;
+    }
+}
+@media (max-width: 480px) {
+    .custom-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .custom-gallery-grid .span-2 {
+        grid-column: span 1;
+    }
+}
+
+
+/* portfolio */
+.portfolio-gallery img {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .portfolio-gallery img:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+
+  .rounded {
+    border-radius: 12px;
+  }
 /*  Map
 /*------------------------------------------------------------------------------*/   
 #map { display: block; height: 400px; width: 100%; }
