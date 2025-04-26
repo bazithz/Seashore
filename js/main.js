@@ -198,6 +198,18 @@
              }
          },
      };
+
+     document.addEventListener("DOMContentLoaded", function () {
+        const currentPath = window.location.pathname.split("/").pop();
+        const menuLinks = document.querySelectorAll(".main-menu .mega-menu-link");
+
+        menuLinks.forEach(link => {
+            const linkPath = link.getAttribute("href");
+            if (linkPath === currentPath && linkPath !== "contact.html") {
+                link.classList.add("active");
+            }
+        });
+    });
  
      
      $('.btn-show-menu-mobile').on('click', function(e){

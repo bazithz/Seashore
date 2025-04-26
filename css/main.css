@@ -604,7 +604,12 @@ a:hover, .ttm-bgcolor-darkgrey a:hover,
 .ttm-p_table-amount, .breadcrumb-wrapper span i, 
 .ttm-page-title-row .breadcrumb-wrapper span,
 .ttm-blog-single blockquote cite,
-.coupon_toggle .coupon_code:before, #payment .payment_box:before{
+.coupon_toggle .coupon_code:before, #payment .payment_box:before
+{
+    color: #ffbc2b;
+}
+
+.menu .active {
     color: #ffbc2b;
 }
 
