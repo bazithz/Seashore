@@ -580,7 +580,6 @@ i.ttm-textcolor-skincolor, :not(.ttm-bgcolor-darkgrey) i.ttm-textcolor-skincolor
 .ttm-icon_element-fill.ttm-icon_element-color-white,
 .ttm-icon_element-fill.ttm-icon_element-color-white i,
 .ttm-icon_element-color-skincolor, 
-.ttm-icon_element-color-skincolor:not(.ttm-icon_element-fill) i, 
 .ttm-bgcolor-darkgrey .ttm-icon_element-color-skincolor i,
 nav.main-menu ul.menu > li.mega-menu-item:hover > a, 
 nav.main-menu ul.menu li > ul.mega-submenu li a:hover, 
@@ -609,6 +608,9 @@ a:hover, .ttm-bgcolor-darkgrey a:hover,
     color: #ffbc2b;
 }
 
+.ttm-icon_element-color-skincolor:not(.ttm-icon_element-fill) i{
+    color: #102b50;
+}
 .menu .active {
     color: #ffbc2b;
 }
@@ -749,7 +751,6 @@ nav.main-menu ul.menu li ul.mega-submenu li a,
 .ttm-progress-bar .progressbar-title, .ttm-progress-bar .progress-bar-percent ,
 .ttm-bgcolor-skincolor .ttm-bgcolor-white .section-title h2.title,
 .ttm-bgcolor-darkgrey .ttm-bgcolor-white .section-title h2.title,
-.featured-icon-box.icon-align-top-content.style2 .featured-title h5,
 .featured-imagebox-post.style1 .featured-content .featured-title h5,
 .featured-imagebox-post.style1 .featured-content .featured-title h5 a,
 .ttm-tabs.ttm-tab-style-01 ul.tabs li a,

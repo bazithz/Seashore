@@ -51,15 +51,7 @@
 @media only screen and (min-width: 1200px){
 
 
-	/* #site-header-menu .site-navigation li.ttm-sepline {
-	    position: absolute !important;
-	    top: 0px !important;
-	    left: 0px;
-	    right: auto;
-	    text-align: center;
-	    height: 25px !important;
-	    display: block;
-	} */
+	
 	#site-header-menu .site-navigation .sep-img {
 		display: inline-block;
 	    position: absolute;
@@ -90,7 +82,7 @@
 	    top: 0px;
 	    width: 0;
 	    height: 500px;
-	    background: #F5C45E;
+	    background: url(../images/colors.png);
 	    width: 600px;
 	}
 	.header.logo-with-bg-shape .site-branding {
